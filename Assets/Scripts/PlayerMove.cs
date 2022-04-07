@@ -6,7 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
     float runSpeed = 2;
 
-    float jumpSpeed = 3;
+    float jumpSpeed = 4;
 
     Rigidbody2D rb2D;
 
@@ -62,6 +62,15 @@ public class PlayerMove : MonoBehaviour
         {
             animator.SetBool("Jump", false);
             animator.SetBool("Falling",false);            
+        }
+
+        if (rb2D.velocity.y<0)
+        {
+            animator.SetBool("Falling", true);
+        }
+        else if (rb2D.velocity.y > 0)
+        {
+            animator.SetBool("Falling", false);
         }
 
         //Animacion caer

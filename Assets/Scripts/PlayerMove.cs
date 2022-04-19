@@ -49,6 +49,10 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey("space") && CheckGround.isGrounded)
         {
             rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
+
+        } else if (Input.GetKey("w") && CheckGround.isGrounded)
+        {
+            rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
         }
         //Si esta en el suelo o no
         if (CheckGround.isGrounded == false)

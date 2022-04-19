@@ -61,7 +61,7 @@ public class PlayerMove : MonoBehaviour
         if (CheckGround.isGrounded == true)
         {
             animator.SetBool("Jump", false);
-            animator.SetBool("Falling",false);            
+            animator.SetBool("Falling", false);
         }
 
         if (rb2D.velocity.y<0)

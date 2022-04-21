@@ -34,9 +34,13 @@ public class PlayerRespawn : MonoBehaviour
 
         if(heal == 0){
             animator.Play("Death");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
+    }
+
+    private void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }

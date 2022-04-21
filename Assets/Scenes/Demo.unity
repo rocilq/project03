@@ -391,7 +391,6 @@ GameObject:
   - component: {fileID: 210162244}
   - component: {fileID: 210162247}
   - component: {fileID: 210162246}
-  - component: {fileID: 210162248}
   m_Layer: 0
   m_Name: Warrior
   m_TagString: Untagged
@@ -546,6 +545,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 210162241}
+  pe: {fileID: 812440914}
+  damage: 0.25
+  health: {fileID: 455212003}
 --- !u!114 &210162247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,24 +562,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 210162242}
   animator: {fileID: 210162241}
---- !u!111 &210162248
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210162240}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 36684c15dec018a4ca8dcf9c646e3c15, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 36684c15dec018a4ca8dcf9c646e3c15, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &262097762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1542,14 +1526,14 @@ RectTransform:
   m_GameObject: {fileID: 846553150}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.76875, y: 2.76875, z: 2.76875}
+  m_LocalScale: {x: 2.563475, y: 2.563475, z: 2.563475}
   m_Children: []
   m_Father: {fileID: 705550038}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.972229, y: 129.02374}
+  m_AnchoredPosition: {x: -300, y: 175}
   m_SizeDelta: {x: 135, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &846553152

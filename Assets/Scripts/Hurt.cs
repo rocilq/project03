@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerRespawn : MonoBehaviour
-{   
-    private float checkPointPositionX, checkPointPositionY;
-    private int life;
-    public Animator animator;
-    public PlayerStats pe;
-    public float damage = 0.25f;
+public class Hurt : MonoBehaviour
+{
     public HealthBarHUDTester health;
+    public float damage = 0.25f;
+    public Animator animator;
+
+    public PlayerStats pe;
+
+    private float checkPointPositionX, checkPointPositionY;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,13 +23,16 @@ public class PlayerRespawn : MonoBehaviour
         }
     }
 
-    private void Update()
+    // Update is called once per f
+    
+    void Update()
     {
         
     }
 
-    public void PlayerDamaged()
+    public void Damaged()
     {
+        
         animator.Play("Hurt");
         health.Hurt(damage);
         
@@ -38,5 +44,4 @@ public class PlayerRespawn : MonoBehaviour
         }
 
     }
-
 }

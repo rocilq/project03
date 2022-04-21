@@ -19,7 +19,9 @@ public class PlayerRespawn : MonoBehaviour
 
     public void PlayerDamaged()
     {
-        animator.Play("Hurt");
+        animator.Play("Death");
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
 }

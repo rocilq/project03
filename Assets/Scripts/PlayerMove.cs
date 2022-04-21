@@ -53,7 +53,11 @@ public class PlayerMove : MonoBehaviour
         } else if (Input.GetKey("w") && CheckGround.isGrounded)
         {
             rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
+        } else if (Input.GetKey("up") && CheckGround.isGrounded)
+        {
+            rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
         }
+        
         //Si esta en el suelo o no
         if (CheckGround.isGrounded == false)
         {
@@ -67,7 +71,7 @@ public class PlayerMove : MonoBehaviour
             animator.SetBool("Jump", false);
             animator.SetBool("Falling", false);
         }
-
+        
         if (rb2D.velocity.y<0)
         {
             animator.SetBool("Falling", true);
@@ -86,6 +90,7 @@ public class PlayerMove : MonoBehaviour
         {
             animator.SetBool("Falling", false);
         }
+
     }
 
 }

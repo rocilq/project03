@@ -27,11 +27,13 @@ public class PlayerRespawn : MonoBehaviour
 
     public void PlayerDamaged()
     {
-        animator.Play("Hurt");
-        health.Hurt(damage);
-        
         float heal = pe.Health;
 
+        if (heal > 0){
+        animator.Play("Hurt");
+        health.Hurt(damage);
+        }
+        
         if(heal == 0){
             animator.Play("Death");
         }

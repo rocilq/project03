@@ -215,7 +215,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.041780952}
+  m_Offset: {x: 0, y: -0.026835004}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -226,7 +226,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.07643809}
+  m_Size: {x: 0.16, y: 0.10632999}
   m_EdgeRadius: 0
 --- !u!95 &22747419
 Animator:
@@ -393,7 +393,7 @@ GameObject:
   - component: {fileID: 210162246}
   m_Layer: 0
   m_Name: Warrior
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -476,12 +476,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210162240}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.31, y: 0.18369505, z: 0}
+  m_LocalPosition: {x: -1.587, y: 0.248, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2073740371}
   - {fileID: 519420032}
   - {fileID: 1015548937}
+  - {fileID: 1948809015}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -763,9 +764,12 @@ GameObject:
   - component: {fileID: 470385493}
   - component: {fileID: 470385492}
   - component: {fileID: 470385495}
+  - component: {fileID: 470385497}
+  - component: {fileID: 470385496}
+  - component: {fileID: 470385498}
   m_Layer: 0
   m_Name: skeleton-1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -874,6 +878,57 @@ MonoBehaviour:
   moveSpots:
   - {fileID: 678365716}
   - {fileID: 282043840}
+--- !u!70 &470385496
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470385491}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0035105348, y: -0.031594396}
+  m_Size: {x: 0.3206433, y: 0.4568112}
+  m_Direction: 0
+--- !u!50 &470385497
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470385491}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &470385498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470385491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0b44656d1e70d429148911b4bcf1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  spriteRenderer: {fileID: 470385493}
 --- !u!1 &504843722
 GameObject:
   m_ObjectHideFlags: 0
@@ -1984,7 +2039,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.026276924}
+  m_Offset: {x: 0, y: -0.021881819}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1995,7 +2050,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.10744615}
+  m_Size: {x: 0.16, y: 0.09865594}
   m_EdgeRadius: 0
 --- !u!212 &1500834655
 SpriteRenderer:
@@ -8310,7 +8365,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.04043317}
+  m_Offset: {x: 0, y: -0.030762253}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8321,7 +8376,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.07913366}
+  m_Size: {x: 0.16, y: 0.098475486}
   m_EdgeRadius: 0
 --- !u!114 &1913034596
 MonoBehaviour:
@@ -8335,6 +8390,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23b5346c75c63c0428740ecbd7c6bd71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1948809014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1948809015}
+  - component: {fileID: 1948809017}
+  - component: {fileID: 1948809016}
+  m_Layer: 0
+  m_Name: CombatWeapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1948809015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948809014}
+  m_LocalRotation: {x: -0.0008888986, y: 0.04248715, z: -0.99909663, w: 0.0003088368}
+  m_LocalPosition: {x: 0.296, y: 0.012, z: -417.73132}
+  m_LocalScale: {x: 1, y: 0.84941, z: 1}
+  m_Children: []
+  m_Father: {fileID: 210162243}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 4.87, y: 0.104, z: -179.96}
+--- !u!58 &1948809016
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948809014}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.21041004, y: -0.00015100178}
+  serializedVersion: 2
+  m_Radius: 0.1626764
+--- !u!114 &1948809017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948809014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 105825638a798d44592371436169927d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePoints: 10
+  targetTag: 1
 --- !u!1 &2073740370
 GameObject:
   m_ObjectHideFlags: 0

@@ -39,8 +39,9 @@ public class Hurt : MonoBehaviour
         float heal = pe.Health;
 
         if(heal == 0){
+            
             animator.Play("Death");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
         }
 
     }

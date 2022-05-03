@@ -1,6 +1,7 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class PlayerMove : MonoBehaviour
     float jumpSpeed = 4;
 
     Rigidbody2D rb2D;
+
+    public PlayerStats pe;
+
 
     public SpriteRenderer spriteRenderer;
 
@@ -22,41 +26,49 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {   
-        //Movimiento derecha e izquierda
-        if (Input.GetKey("d") || Input.GetKey("right"))
-        {
-
-            rb2D.velocity = new Vector2(runSpeed, rb2D.velocity.y);
-            spriteRenderer.flipX = false;
-            animator.SetBool("Run", true);
-
-        } 
         
-        else if (Input.GetKey("a") || Input.GetKey("left"))
-        {
-            rb2D.velocity = new Vector2(-runSpeed, rb2D.velocity.y);
-            spriteRenderer.flipX = true;
-            animator.SetBool("Run", true);
+        float heal = pe.Health;
 
-        } 
+        if(heal > 0){
+
+            //Movimiento derecha e izquierda
+            if (Input.GetKey("d") || Input.GetKey("right"))
+            {
+
+                rb2D.velocity = new Vector2(runSpeed, rb2D.velocity.y);
+                spriteRenderer.flipX = false;
+                animator.SetBool("Run", true);
+
+            } 
+            
+            else if (Input.GetKey("a") || Input.GetKey("left"))
+            {
+                rb2D.velocity = new Vector2(-runSpeed, rb2D.velocity.y);
+                spriteRenderer.flipX = true;
+                animator.SetBool("Run", true);
+
+            } 
+            
+            else
+            {
+                rb2D.velocity = new Vector2(0, rb2D.velocity.y);
+                animator.SetBool("Run",false);
+            }
+            //Salto
+            if (Input.GetKey("space") && CheckGround.isGrounded)
+            {
+                rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
+
+            } else if (Input.GetKey("w") && CheckGround.isGrounded)
+            {
+                rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
+            } else if (Input.GetKey("up") && CheckGround.isGrounded)
+            {
+                rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
+            }
+
+        }
         
-        else
-        {
-            rb2D.velocity = new Vector2(0, rb2D.velocity.y);
-            animator.SetBool("Run",false);
-        }
-        //Salto
-        if (Input.GetKey("space") && CheckGround.isGrounded)
-        {
-            rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
-
-        } else if (Input.GetKey("w") && CheckGround.isGrounded)
-        {
-            rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
-        } else if (Input.GetKey("up") && CheckGround.isGrounded)
-        {
-            rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
-        }
         
         //Si esta en el suelo o no
         if (CheckGround.isGrounded == false)
@@ -81,6 +93,7 @@ public class PlayerMove : MonoBehaviour
             animator.SetBool("Falling", false);
         }
 
+
         //Animacion caer
         if (rb2D.velocity.y < 0)
         {
@@ -92,5 +105,6 @@ public class PlayerMove : MonoBehaviour
         }
 
     }
+
 
 }

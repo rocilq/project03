@@ -1,4 +1,4 @@
-﻿/*
+/*
  *  Author: ariel oliveira [o.arielg@gmail.com]
  */
 
@@ -29,7 +29,15 @@ public class PlayerStats : MonoBehaviour
     [SerializeField]
     private float maxTotalHealth;
 
-    public float Health { get { return health; } }
+    public float Health { 
+        get 
+        { 
+            
+            return health; 
+        
+        } 
+        
+    }
     public float MaxHealth { get { return maxHealth; } }
     public float MaxTotalHealth { get { return maxTotalHealth; } }
 

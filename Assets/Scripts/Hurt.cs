@@ -20,6 +20,8 @@ public class Hurt : MonoBehaviour
         if (PlayerPrefs.GetFloat("checkPointPositionX") != 0)
         {
             transform.position=(new Vector2(PlayerPrefs.GetFloat("checkPointPositionX"), PlayerPrefs.GetFloat("checkPointPositionY")));
+            animator.SetBool("Death", false);
+            animator.SetBool("Hurt", false);
         }
     }
 
@@ -33,14 +35,14 @@ public class Hurt : MonoBehaviour
     public void Damaged()
     {
         
-        animator.Play("Hurt");
+        animator.SetBool("Hurt", true);
         health.Hurt(damage);
         
         float heal = pe.Health;
 
         if(heal == 0){
             
-            animator.Play("Death");
+            animator.SetBool("Death", true);
 
         }
 

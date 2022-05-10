@@ -29,7 +29,7 @@ public class PlayerMove : MonoBehaviour
         
         float heal = pe.Health;
 
-        if(heal > 0){
+        
 
             //Movimiento derecha e izquierda
             if (Input.GetKey("d") || Input.GetKey("right"))
@@ -67,8 +67,6 @@ public class PlayerMove : MonoBehaviour
                 rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
             }
 
-        }
-        
         
         //Si esta en el suelo o no
         if (CheckGround.isGrounded == false)

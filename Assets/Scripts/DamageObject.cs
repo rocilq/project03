@@ -9,8 +9,6 @@ public class DamageObject : MonoBehaviour
     {
         Debug.Log("Player Damaged");
 
-        //collision.transform.GetComponent<Hurt>().Damaged();
-
         collision.transform.GetComponent<PlayerRespawn>().PlayerDamaged();
         
     }

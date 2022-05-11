@@ -26,5 +26,6 @@ public class Enemy : MonoBehaviour
     private void Muerte()
     {
         animator.SetTrigger("Death");
+        Destroy(gameObject,.5f);
     }
 }

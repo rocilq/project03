@@ -6,14 +6,11 @@ using UnityEngine;
 
 public class CombateCaC : MonoBehaviour
 {
-   [SerializeField] private Transform controladorGolpe;
-   [SerializeField] private float radioGolpe;
-   [SerializeField] private float dañoGolpe;
-   [SerializeField] private float tiempoEntreAtaques;
-   [SerializeField] private float tiempoSiguienteAtaque;
-   private float time = 0;
-
-   float duration = 1.5f;
+   [SerializeField] public Transform controladorGolpe;
+   [SerializeField] private float radioGolpe = 0.2f;
+   [SerializeField] private float dañoGolpe = 50;
+   [SerializeField] private float tiempoEntreAtaques = 1;
+   [SerializeField] private float tiempoSiguienteAtaque = 0;
 
    Enemy enemy;
 
@@ -37,7 +34,7 @@ public class CombateCaC : MonoBehaviour
         }
     }
 
-   private void Golpe()
+   public void Golpe()
     {
 
         animator.SetTrigger("Attack");
@@ -50,7 +47,6 @@ public class CombateCaC : MonoBehaviour
                 if (collision.CompareTag("Enemy"))
                 {
                     collision.transform.GetComponent<Enemy>().TomarDaño(dañoGolpe);
-                    ColorChanger();
                 }
             }
 
@@ -64,13 +60,4 @@ public class CombateCaC : MonoBehaviour
        Gizmos.color = Color.red;
        Gizmos.DrawWireSphere(controladorGolpe.position, radioGolpe);
    }
-
-   void ColorChanger()
-     {
-        enemy.sp.color = Color.red;
-
-        if (time < 1){ 
-            time += Time.deltaTime/duration;
-        }
-     }
 }

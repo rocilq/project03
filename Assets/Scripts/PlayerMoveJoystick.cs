@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
+using System.IO;
 using UnityEngine;
 
 public class PlayerMoveJoystick : MonoBehaviour
@@ -19,6 +21,13 @@ public class PlayerMoveJoystick : MonoBehaviour
     Rigidbody2D rb2D;
 
     public SpriteRenderer spriteRenderer;
+   
+   CombateCaC combat;
+   [SerializeField] private float radioGolpe = 0.2f;
+   [SerializeField] private float dañoGolpe = 50;
+   
+   [SerializeField] private float tiempoEntreAtaques = 1;
+   [SerializeField] private float tiempoSiguienteAtaque = 0;
 
     public Animator animator;
     // Start is called before the first frame update
@@ -101,4 +110,43 @@ public class PlayerMoveJoystick : MonoBehaviour
             rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
         }
     }
+
+    public void Attack(){
+        try{
+
+        
+            if(tiempoSiguienteAtaque > 0){
+                tiempoSiguienteAtaque -= Time.deltaTime;
+            }
+            if(tiempoSiguienteAtaque <= 0)
+            {
+                Golpe();
+                tiempoSiguienteAtaque = tiempoEntreAtaques;
+            }
+
+        }catch(NullReferenceException e){
+            Console.WriteLine(e);
+        }
+    }
+
+    public void Golpe()
+    {
+        animator.SetTrigger("Attack");
+        Collider2D[] objetos = Physics2D.OverlapCircleAll(combat.controladorGolpe.position, radioGolpe); 
+
+        try{
+
+            foreach (Collider2D collision in objetos)
+            {
+                if (collision.CompareTag("Enemy"))
+                {
+                    collision.transform.GetComponent<Enemy>().TomarDaño(dañoGolpe);
+                }
+            }
+
+        }catch(NullReferenceException e){
+            Console.WriteLine(e);
+        }
+    }
+    
 }

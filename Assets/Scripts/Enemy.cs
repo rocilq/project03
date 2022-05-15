@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private float vida;
     private Animator animator;
+    public SpriteRenderer sp;
     // Start is called before the first frame update
     private void Start()
     {

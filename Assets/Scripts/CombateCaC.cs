@@ -9,6 +9,9 @@ public class CombateCaC : MonoBehaviour
    [SerializeField] private Transform controladorGolpe;
    [SerializeField] private float radioGolpe;
    [SerializeField] private float dañoGolpe;
+   [SerializeField] private float tiempoEntreAtaques;
+   [SerializeField] private float tiempoSiguienteAtaque;
+
 
     private Animator animator;
    
@@ -19,9 +22,13 @@ public class CombateCaC : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if(tiempoSiguienteAtaque > 0){
+            tiempoSiguienteAtaque -= Time.deltaTime;
+        }
+        if(Input.GetButtonDown("Fire1") && tiempoSiguienteAtaque <= 0)
         {
             Golpe();
+            tiempoSiguienteAtaque = tiempoEntreAtaques;
         }
     }
 

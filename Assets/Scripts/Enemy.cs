@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float vida;
     private Animator animator;
     public SpriteRenderer sp;
+    
     // Start is called before the first frame update
     private void Start()
     {
@@ -29,4 +30,5 @@ public class Enemy : MonoBehaviour
         animator.SetTrigger("Death");
         Destroy(gameObject,.5f);
     }
+
 }

@@ -11,6 +11,11 @@ public class CombateCaC : MonoBehaviour
    [SerializeField] private float dañoGolpe;
    [SerializeField] private float tiempoEntreAtaques;
    [SerializeField] private float tiempoSiguienteAtaque;
+   private float time = 0;
+
+   float duration = 1.5f;
+
+   Enemy enemy;
 
 
     private Animator animator;
@@ -45,6 +50,7 @@ public class CombateCaC : MonoBehaviour
                 if (collision.CompareTag("Enemy"))
                 {
                     collision.transform.GetComponent<Enemy>().TomarDaño(dañoGolpe);
+                    ColorChanger();
                 }
             }
 
@@ -58,4 +64,13 @@ public class CombateCaC : MonoBehaviour
        Gizmos.color = Color.red;
        Gizmos.DrawWireSphere(controladorGolpe.position, radioGolpe);
    }
+
+   void ColorChanger()
+     {
+        enemy.sp.color = Color.red;
+
+        if (time < 1){ 
+            time += Time.deltaTime/duration;
+        }
+     }
 }

@@ -8,15 +8,15 @@ public class UIControler : MonoBehaviour
 
     public GameObject optionsPanel;
 
-    public void OptionsPanel()
+    public void Pause()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 0f;
         optionsPanel.SetActive(true);
     }
 
-    public void Return()
+    public void Resume()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 1f;
         optionsPanel.SetActive(false);
     }
 
@@ -25,6 +25,14 @@ public class UIControler : MonoBehaviour
         //sonidos o graficos 
         SceneManager.LoadScene("Settings");
     }
+
+    public void Restart()
+    {
+        //sonidos o graficos 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
+    }
+
 
     public void GoMainMenu()
     {
@@ -36,5 +44,11 @@ public class UIControler : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void sceneGame()
+    {
+        SceneManager.LoadScene("Level1");
+        Time.timeScale = 1f;
     }
 }

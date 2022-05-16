@@ -23,14 +23,17 @@ public class UIControler : MonoBehaviour
     public void AnotherOptions()
     {
         //sonidos o graficos 
+        SceneManager.LoadScene("Settings");
     }
 
     public void GoMainMenu()
     {
         //reinicia la partida de momento
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("SampleScene");
 
     }
+
+
 
     public void QuitGame()
     {

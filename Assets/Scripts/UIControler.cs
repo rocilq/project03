@@ -33,8 +33,6 @@ public class UIControler : MonoBehaviour
 
     }
 
-
-
     public void QuitGame()
     {
         Application.Quit();

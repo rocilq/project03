@@ -22,18 +22,6 @@ public class CombateCaC : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    private void Update()
-    {
-        if(tiempoSiguienteAtaque > 0){
-            tiempoSiguienteAtaque -= Time.deltaTime;
-        }
-        if(Input.GetButtonDown("Fire1") && tiempoSiguienteAtaque <= 0)
-        {
-            Golpe();
-            tiempoSiguienteAtaque = tiempoEntreAtaques;
-        }
-    }
-
    public void Golpe()
     {
 

@@ -33,6 +33,11 @@ public class UIControler : MonoBehaviour
 
     }
 
+    public void GoNivel1()
+    {
+        SceneManager.LoadScene("Level1");
+    }
+
     public void QuitGame()
     {
         Application.Quit();

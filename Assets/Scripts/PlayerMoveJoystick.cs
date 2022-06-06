@@ -30,10 +30,14 @@ public class PlayerMoveJoystick : MonoBehaviour
    [SerializeField] private float tiempoSiguienteAtaque = 0;
 
     public Animator animator;
+
+    private Vector3 respawnPoint;
+    public GameObject fallDetector;
     // Start is called before the first frame update
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
+        respawnPoint = transform.position;
     }
 
     void Update()
@@ -148,5 +152,12 @@ public class PlayerMoveJoystick : MonoBehaviour
             Console.WriteLine(e);
         }
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "FallDetector")
+        {
+            transform.position = respawnPoint;
+        }
+    }
 }

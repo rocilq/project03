@@ -7,6 +7,7 @@ TagManager:
   - Spikes
   - Enemy
   - Suelo
+  - FallDetector
   layers:
   - Default
   - TransparentFX

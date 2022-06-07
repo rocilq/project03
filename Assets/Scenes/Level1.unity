@@ -1209,7 +1209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controladorGolpe: {fileID: 130183421}
   radioGolpe: 0.2
-  "da\xF1oGolpe": 20
+  "da\xF1oGolpe": 50
   tiempoEntreAtaques: 1
   tiempoSiguienteAtaque: 0
 --- !u!114 &210162250
@@ -26067,7 +26067,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8852739, y: 1}
+    m_SensorSize: {x: 1.995467, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

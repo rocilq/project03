@@ -22368,7 +22368,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &627725310
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23364,7 +23364,7 @@ RectTransform:
   m_GameObject: {fileID: 846553150}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.563475, y: 2.563475, z: 2.563475}
+  m_LocalScale: {x: 4.154945, y: 3.8545249, z: 2.563475}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 705550038}
@@ -23372,7 +23372,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -271, y: 155}
+  m_AnchoredPosition: {x: -297, y: 162}
   m_SizeDelta: {x: 135, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &846553152
@@ -27290,7 +27290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610743338}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.15, y: 1.13, z: 0}
+  m_LocalPosition: {x: -1.004, y: 1.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49235,8 +49235,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1850559485}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.901, y: -1.001, z: -0.20166892}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 5.78, y: -0.73, z: -0.20166892}
+  m_LocalScale: {x: 1.3375, y: 0.975, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1610743339}
@@ -49495,6 +49495,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fixed Joystick
       objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
 --- !u!224 &1914851804 stripped
@@ -49520,7 +49524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1933232785
 RectTransform:
   m_ObjectHideFlags: 0

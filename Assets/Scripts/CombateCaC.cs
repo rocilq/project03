@@ -22,6 +22,13 @@ public class CombateCaC : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    private void Update(){
+        if(Input.GetButtonDown("Fire1"))
+        {
+            Golpe();
+        }
+    }
+
    public void Golpe()
     {
 

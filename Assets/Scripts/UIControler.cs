@@ -26,6 +26,18 @@ public class UIControler : MonoBehaviour
         SceneManager.LoadScene("Settings");
     }
 
+    public void AnotherOptions1()
+    {
+        //sonidos o graficos 
+        SceneManager.LoadScene("Settings1");
+    }
+
+    public void AnotherOptions2()
+    {
+        //sonidos o graficos 
+        SceneManager.LoadScene("Settings2");
+    }
+
     public void Restart()
     {
         //sonidos o graficos 
@@ -44,6 +56,11 @@ public class UIControler : MonoBehaviour
     public void GoNivel1()
     {
         SceneManager.LoadScene("Level1");
+    }
+
+    public void GoNivel2()
+    {
+        SceneManager.LoadScene("Level2");
     }
 
     public void QuitGame()

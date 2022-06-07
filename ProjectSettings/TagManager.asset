@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Suelo
   - FallDetector
+  - FallDetector1
+  - FallDetector2
   layers:
   - Default
   - TransparentFX

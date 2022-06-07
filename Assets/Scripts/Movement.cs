@@ -10,8 +10,13 @@ public class Movement : MonoBehaviour {
     bool isJumping = false; //Para comprobar si ya está saltando
     [Range(1, 500)] public float potenciaSalto; //Potencia de salto del jugador
     private Animator animator; //Para campturar el componente Animator del Jugador
-    private Vector3 checkpoint;
+
+    private Vector3 respawnPoint;
     public GameObject fallDetector;
+    private Vector3 respawnPoint1;
+    public GameObject fallDetector1;
+    private Vector3 respawnPoint2;
+    public GameObject fallDetector2;
 
     void Start () {
 
@@ -19,7 +24,10 @@ public class Movement : MonoBehaviour {
         rb2d = GetComponent<Rigidbody2D>();
         spRd = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        checkpoint = GameObject.Find("CheckPoint").transform.position;
+        //checkpoint = GameObject.Find("CheckPoint").transform.position;
+        respawnPoint = fallDetector.transform.position;
+        respawnPoint1 = fallDetector1.transform.position;
+        respawnPoint2 = fallDetector2.transform.position;
     }
 	
 	void FixedUpdate () {
@@ -96,7 +104,15 @@ public class Movement : MonoBehaviour {
     {
         if (collision.tag == "FallDetector")
         {
-            transform.position = checkpoint;
+            transform.position = respawnPoint;
+
+        } else if (collision.tag == "FallDetector1")
+        {
+            transform.position = respawnPoint1;
+
+        } else if (collision.tag == "FallDetector2")
+        {
+            transform.position = respawnPoint2;
         }
     }
 }

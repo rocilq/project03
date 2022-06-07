@@ -33,11 +33,17 @@ public class PlayerMoveJoystick : MonoBehaviour
 
     private Vector3 respawnPoint;
     public GameObject fallDetector;
+    private Vector3 respawnPoint1;
+    public GameObject fallDetector1;
+    private Vector3 respawnPoint2;
+    public GameObject fallDetector2;
     // Start is called before the first frame update
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
-        respawnPoint = transform.position;
+        respawnPoint = fallDetector.transform.position;
+        respawnPoint1 = fallDetector1.transform.position;
+        respawnPoint2 = fallDetector2.transform.position;
     }
 
     void Update()
@@ -158,6 +164,14 @@ public class PlayerMoveJoystick : MonoBehaviour
         if (collision.tag == "FallDetector")
         {
             transform.position = respawnPoint;
+
+        } else if (collision.tag == "FallDetector1")
+        {
+            transform.position = respawnPoint1;
+
+        } else if (collision.tag == "FallDetector2")
+        {
+            transform.position = respawnPoint2;
         }
     }
 }

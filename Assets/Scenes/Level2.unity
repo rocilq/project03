@@ -2195,7 +2195,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.995467, y: 1}
+    m_SensorSize: {x: 1.8852739, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3629,7 +3629,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1232014895
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5493,7 +5493,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 2.07
   potenciaSalto: 193
-  fallDetector: {fileID: 0}
+  fallDetector: {fileID: 73909397}
+  fallDetector1: {fileID: 0}
+  fallDetector2: {fileID: 0}
 --- !u!114 &2024332928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5535,7 +5537,9 @@ MonoBehaviour:
   tiempoEntreAtaques: 1
   tiempoSiguienteAtaque: 0
   animator: {fileID: 2024332933}
-  fallDetector: {fileID: 0}
+  fallDetector: {fileID: 73909397}
+  fallDetector1: {fileID: 0}
+  fallDetector2: {fileID: 0}
 --- !u!114 &2024332930
 MonoBehaviour:
   m_ObjectHideFlags: 0

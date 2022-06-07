@@ -1008,7 +1008,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Game Over
+  m_Text: Game Completed!
 --- !u!222 &389385826
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2195,7 +2195,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8852739, y: 1}
+    m_SensorSize: {x: 1.995467, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4435,7 +4435,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567405640}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.124, y: 0.053, z: 0}
+  m_LocalPosition: {x: -0.001, y: 0.053, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5507,7 +5507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controladorGolpe: {fileID: 1567405641}
-  radioGolpe: 0.2
+  radioGolpe: 0.35
   "da\xF1oGolpe": 50
   tiempoEntreAtaques: 1
   tiempoSiguienteAtaque: 0
@@ -5527,7 +5527,7 @@ MonoBehaviour:
   verticalMove: 0
   joystick: {fileID: 1265334219}
   runSpeedHorizontal: 2
-  runSpeed: 1.25
+  runSpeed: 1.35
   jumpSpeed: 4
   spriteRenderer: {fileID: 2024332934}
   radioGolpe: 0.2
